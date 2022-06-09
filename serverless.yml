@@ -6,8 +6,10 @@ provider:
   memorySize: 256
   region: us-west-2
   stage: ${opt:stage, 'dev'}
-  iamRoleStatements:
-    - ${file(iam/SendMailIAM.yml):SendMailIAM}
+  iam:
+    role:
+      statements:
+        - ${file(iam/SendMailIAM.yml):SendMailIAM}
 
 resources:
   Resources:
