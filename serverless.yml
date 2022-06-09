@@ -1,13 +1,8 @@
-service:
-  name: notification-service
-
-plugins:
-  - serverless-bundle
-  - serverless-pseudo-parameters
+service: notification-service
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs16.x
   memorySize: 256
   region: us-west-2
   stage: ${opt:stage, 'dev'}
@@ -27,7 +22,7 @@ functions:
     events:
       - sqs:
           arn: ${self:custom.mailQueue.arn}
-          batchsize: 1
+          batchSize: 1
 
 custom:
   mailQueue:
