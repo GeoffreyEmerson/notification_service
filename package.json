@@ -6,7 +6,9 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "deploy": "sls deploy"
+    "deploy": "sls deploy",
+    "doc": "sls doctor",
+    "remove": "sls remove"
   },
   "dependencies": {
     "aws-sdk": "^2.1151.0"
