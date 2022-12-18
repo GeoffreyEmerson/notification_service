@@ -11,9 +11,9 @@
     "remove": "sls remove"
   },
   "dependencies": {
-    "aws-sdk": "^2.1151.0"
+    "aws-sdk": "^2.1277.0"
   },
   "devDependencies": {
-    "serverless": "^3.12.0"
+    "serverless": "^3.25.1"
   }
 }
